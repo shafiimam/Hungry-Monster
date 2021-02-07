@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(104, 100, 100);
+    ;
+}
+
+nav {
+    padding: 5px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    background-color: rgb(206, 202, 202);
+    padding: 10px 5px;
+    border-radius: 3px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0px 20px;
+}
+
+.search-box {
+    margin: 100px auto;
+    padding: 0px 30%;
+}
+
+#search-food {
+    width: 300px;
+    height: 33px;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 3px;
+    outline: none;
+}
+
+#food-card-grid,
+#searched-food-card-grid {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+}
+
+.food-card {
+    margin: auto;
+    height: auto;
+    width: 240px;
+    box-shadow: 5px 10px 20px rgb(192, 191, 191);
+    border-radius: 10px;
+    transition: all 0.1s ease-out;
+    box-shadow: 5px 10px 20px grey;
+    color: rgb(104, 100, 100);
+}
+
+.food-card img {
+    height: 190px;
+    width: 100%;
+    background-size: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.food-name {
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.food-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.searched-food-card {
+    width: 240px;
+    height: 260px;
+    background-color: rgb(233, 231, 231);
+    border-radius: 10px;
+    transition: all 0.1s ease-out;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 10px 20px rgb(192, 191, 191);
+    overflow: hidden;
+}
+
+.searched-food-card img {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.searched-food-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#ingredients-div {
+    position: relative;
+    background-color: rgb(232, 236, 235);
+    height: auto;
+    width: 40%;
+    margin: auto;
+    padding-top: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px grey;
+}
+
+#ingredients-div>img {
+    position: relative;
+    top: 15px;
+    background-size: cover;
+    height: 320px;
+    width: 100%;
+}
+
+#ingredients-div>h3,
+h4 {
+    padding-top: 10px;
+    margin: 5px;
+    padding-left: 10px;
+}
+
+li {
+    list-style: none;
+    margin-left: 20px;
+    font-size: 15px;
+    padding: 3px;
+}
+
+.close-card {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: rgb(132, 136, 135);
+    opacity: 0.6;
+    height: auto;
+    width: 30px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+}
+
+.close-card:hover {
+    opacity: 1;
+    background-color: grey;
+    cursor: pointer;
+}
+
+#not-found {
+    height: 60px;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    top: 50px;
+    background-color: rgb(233, 231, 231);
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px grey;
+}
+
+#not-found>h3 {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+footer {
+    height: 50px;
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    padding-top: 10px;
+}
