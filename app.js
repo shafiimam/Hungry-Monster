@@ -1,23 +1,3 @@
-fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
-    .then(response => response.json())
-    .then(data => displayFoods(data.meals))
-
-const displayFoods = foods => {
-    const foodCardGrid = document.getElementById('food-card-grid');
-    for (let i = 0; i < 12; i++) {
-        const food = foods[i];
-        const foodCardDiv = document.createElement('div');
-        foodCardDiv.className = 'food-card';
-        const foodInfo = `
-           <a onClick="ingredientsData('${food.strMeal}')">       
-           <img src="${food.strMealThumb}" alt="">
-           <h2 class="food-name">${food.strMeal}</h2>
-           </a>`
-        foodCardDiv.innerHTML = foodInfo;
-        foodCardGrid.appendChild(foodCardDiv);
-    }
-
-}
 const getFoodDetail = food => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`;
     fetch(url)
@@ -41,8 +21,6 @@ const showFoodGrid = (data) => {
         const foodCard = document.createElement('div');
         foodCard.className = 'searched-food-card';
         foodCard.innerHTML = searchedFood;
-        const currentFoodGrid = document.getElementById('food-card-grid');
-        currentFoodGrid.style.display = 'none';
         const searchedFoodGrid = document.getElementById('searched-food-card-grid');
         searchedFoodGrid.appendChild(foodCard);
     })
@@ -93,8 +71,10 @@ const renderIngredients = data => {
 const closeCard = () => {
     const ingredientsDiv = document.getElementById('ingredients-div');
     ingredientsDiv.style.display = 'none';
+    document.getElementById('not-found').style.display = 'none';
     const foodContainer = document.getElementById('food-container');
     foodContainer.style.display = 'block';
+
 }
 
 const showError = () => {

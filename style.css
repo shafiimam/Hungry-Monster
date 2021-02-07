@@ -53,24 +53,12 @@ button {
     outline: none;
 }
 
-#food-card-grid,
 #searched-food-card-grid {
     width: 85%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 20px;
-}
-
-.food-card {
-    margin: auto;
-    height: auto;
-    width: 240px;
-    box-shadow: 5px 10px 20px rgb(192, 191, 191);
-    border-radius: 10px;
-    transition: all 0.1s ease-out;
-    box-shadow: 5px 10px 20px grey;
-    color: rgb(104, 100, 100);
 }
 
 .food-card img {
@@ -91,11 +79,6 @@ button {
 a {
     text-decoration: none;
     color: black;
-}
-
-.food-card:hover {
-    transform: scale(1.1);
-    cursor: pointer;
 }
 
 .searched-food-card {
@@ -193,10 +176,9 @@ li {
 }
 
 footer {
-    height: 50px;
     position: relative;
-    bottom: 0;
-    margin-top: 50px;
+    top: 100vh;
+    margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
     background-color: grey;
