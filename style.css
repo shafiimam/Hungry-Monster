@@ -163,16 +163,29 @@ li {
     width: 50%;
     position: relative;
     margin: auto;
-    top: 50px;
+    top: 65px;
     background-color: rgb(233, 231, 231);
     border-radius: 10px;
     box-shadow: 5px 10px 10px grey;
 }
 
 #not-found>h3 {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
+    position: relative;
+    left: 122px;
+    top: 20px;
+}
+
+.icon {
+    position: absolute;
+    left: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+i {
+    margin: 0 auto;
+    font-size: 20px;
+    padding-top: 5px;
 }
 
 footer {
