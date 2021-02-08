@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Hungry-Monster</title>
 </head>
 
 <body>
     <nav>
         <a href="index.html">
-            <h2>HM</h2>
+            <h2 class="logo">HM</h2>
+
         </a>
         <ul>
             <a href="index.html">
@@ -24,7 +26,7 @@
     </nav>
     <div id="food-container">
         <div class="search-box">
-            <input id="search-food" type="text" placeholder="enter a food name">
+            <input id="search-food" type="text" placeholder="enter a food name" tooltip="keep blank to get suggestions">
             <button onclick="searchFood()">Search</button>
         </div>
         <div id="searched-food-card-grid">
@@ -36,9 +38,11 @@
     </div>
     <div id="not-found" style="display:none">
         <button onclick="closeCard()" class="close-card">x</button>
-        <h3>Food Not Found!Please try with another name.</h3>
+        <i class="fas fa-exclamation-triangle icon"></i>
+        <h3 id="error-message"></h3>
+
     </div>
-    <footer>&copy Created by Shafi Imam</footer>
+    <footer>&copy2021. Created by Shafi Imam</footer>
     <script src="app.js"></script>
 </body>
 
