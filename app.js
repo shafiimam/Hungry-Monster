@@ -13,6 +13,8 @@ const searchFood = () => {
     }
     // rendering the food list in the grid
 const showFoodGrid = (data) => {
+        const searchedFoodGrid = document.getElementById('searched-food-card-grid')
+        searchedFoodGrid.innerText = '';
         data.forEach(food => {
             const searchedFood = `
         <a onClick="ingredientsData('${food.strMeal}')">       
@@ -21,8 +23,7 @@ const showFoodGrid = (data) => {
         </a>`;
             const foodCard = document.createElement('div');
             foodCard.className = 'searched-food-card';
-            foodCard.innerHTML = searchedFood;
-            const searchedFoodGrid = document.getElementById('searched-food-card-grid');
+            foodCard.innerHTML = searchedFood;;
             searchedFoodGrid.appendChild(foodCard);
         })
     }
