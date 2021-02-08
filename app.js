@@ -1,10 +1,15 @@
 // function for getting food detail.
-const getFoodDetail = food => {
+const getFoodDetail = async food => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(data => showFoodGrid(data.meals))
-        .catch(err => showError());
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        showFoodGrid(data.meals);
+    } catch (error) {
+        showError('Food not found!! please enter another name');
+    }
+
+
 }
 const searchFood = () => {
         const searchFood = document.getElementById('search-food').value;
@@ -79,8 +84,11 @@ const closeCard = () => {
 
     }
     // function for search not found error
-const showError = () => {
+const showError = error => {
     document.getElementById('food-container').style.display = 'none';
-    document.getElementById('not-found').style.display = 'block';
+    const errorMessageDiv = document.getElementById('not-found');
+    document.getElementById('error-message').innerText = error;
+    errorMessageDiv.style.display = 'block';
+
 
 }
